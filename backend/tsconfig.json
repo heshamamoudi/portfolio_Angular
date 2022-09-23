@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "target": "es6",                          
+    "module": "commonjs",                     
+    "lib": ["ES2020", "DOM"], 
+    "outDir": "./www",                        
+    "strict": true,                           
+    "noImplicitAny": true,
+    "sourceMap": true,
+    "moduleResolution": "node",
+    "baseUrl": "/",
+    "paths": {
+      "*": [
+          "node_modules/*"
+      ]
+    },
+    "esModuleInterop": true,                 
+  },
+  "include": [
+    "src/**/*"
+],
+  "exclude": ["node_modules", "./dist", "spec"]
+}

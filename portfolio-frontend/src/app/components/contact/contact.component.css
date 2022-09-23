@@ -1,0 +1,48 @@
+.ctn{
+    width: 100vw !important;
+    height: fit-content;
+    padding: 100px;
+    margin: auto;
+}
+.desc{
+    text-align: center;
+    margin: auto;
+    width: 50%;
+    white-space: pre-line;
+    line-break: strict;
+}
+.fixed{
+  margin: auto;
+text-align: center;
+padding: 50px;
+}
+.high{
+    margin: auto;
+    padding: 50px;
+    width: 800px;
+    min-width: fit-content;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;}
+.form-group{
+    margin: 50px;
+}
+.info h4{
+    padding: 80px 0 0 0;
+}
+form input{
+background: transparent;
+outline: none;
+border: none;
+border-bottom: 1px solid whitesmoke;
+width:400px;
+}
+form textarea{
+    background: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid whitesmoke;
+    width:400px;
+    overflow: hidden;
+    }
+    .info a{
+        color: white;
+    }

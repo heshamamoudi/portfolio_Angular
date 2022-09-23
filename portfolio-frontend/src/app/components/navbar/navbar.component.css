@@ -1,0 +1,32 @@
+.navbar {
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  /* background-color: ; */
+  padding: 40px;
+  position:fixed ;
+}
+.nav {
+  /* justify-content: flex-end; */
+}
+.bars {
+  display: none;
+}
+.brand {
+  display: flex;
+}
+.links-list {
+  margin: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  
+}
+.links-list li {
+  margin: 0 0 0 10px;
+}
+.links-list a {
+  color: white;
+  text-decoration: none;
+}
+

@@ -1,0 +1,36 @@
+.footer{
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    position:fixed ;
+}
+.socials{
+    list-style: none;
+}
+.links{
+    height: calc(30vh - 64px);
+    overflow:auto hidden  ;
+    list-style-type: none;
+    
+}
+.links li, .socials li{
+    margin-top: 10px;
+    
+}
+.line-1 {
+    height: 1px;
+    width: 30px;
+    background: white;
+    display: inline-block;
+    margin-left: -5px;
+    transform: rotate(90deg);
+   
+  }
+.links li{
+writing-mode: vertical-rl;
+text-orientation: mixed;
+}
+a{
+    text-decoration: none;
+    color: white;
+}

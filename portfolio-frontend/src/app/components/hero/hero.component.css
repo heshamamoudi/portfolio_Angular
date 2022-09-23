@@ -1,0 +1,17 @@
+
+.ctn{
+    width: 100vw ;
+    text-align: center;
+    padding: 100px;
+    margin: auto;
+    min-height: fit-content;
+}
+.head{
+    font-size: 100px;
+}
+.upper-text{
+    text-align: center;
+}
+.lower-text{
+    text-align: center;
+}
