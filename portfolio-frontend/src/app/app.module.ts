@@ -8,6 +8,7 @@ import { HeroComponent } from './components/hero/hero.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { LoginComponent } from './components/login/login.component';
 
 
 
@@ -19,6 +20,7 @@ import { ContactComponent } from './components/contact/contact.component';
     NavbarComponent,
     FooterComponent,
     ContactComponent,
+    LoginComponent,
 
 
   ],

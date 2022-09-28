@@ -6,15 +6,6 @@ import * as fs from 'fs';
 const store = new UserStore();
 const private_key = fs.readFileSync('private.pem');
 
-const index = async (req: express.Request, res: express.Response) => {
-  try {
-    const users = await store.index();
-    res.json(users);
-  } catch (error) {
-    res.status(400);
-    res.json(`invalid token ${error}`);
-  }
-};
 
 const Show = async (req: express.Request, res: express.Response) => {
   try {
@@ -27,14 +18,14 @@ const Show = async (req: express.Request, res: express.Response) => {
 };
 
 const Create = async (req: express.Request, res: express.Response) => {
-  let data = req.body;
-  const user: User = {
+  try {
+    let data = req.body;
+   const user: User = {
     first_name: data.first_name,
     last_name: data.last_name,
     username: data.username,
     password: data.password
   };
-  try {
     const newUser = await store.create(user);
     const token = jwt.sign(
       { name: newUser.first_name, Lname: newUser.last_name },
@@ -71,7 +62,8 @@ const signin = async (req: express.Request, res: express.Response) => {
           subject: user?.id + ''
         }
       );
-       res.json({idToken:token,name:user?.first_name,lname:user?.last_name,username:user?.username});   
+      res.cookie("SESSIONID", token, {httpOnly:true, secure:true});
+      //  res.json({idToken:token,name:user?.first_name,lname:user?.last_name,username:user?.username});   
   } catch (error) {
     res.status(401);
     res.json( error );
@@ -80,7 +72,6 @@ const signin = async (req: express.Request, res: express.Response) => {
 
 
 const user_routes = (app: express.Application) => {
-  app.get('/users', authToken, index);
   app.get('/users/:id', authToken, Show);
   app.post('/signin', signin);
   app.post('/signup', Create);
