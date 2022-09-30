@@ -3,14 +3,14 @@
       "driver": "pg",
       "host": "localhost",
       "database": "profile",
-      "user": "hesha",
+      "user": "hesham",
       "password": "123123"
     },
     "test": {
         "driver": "pg",
         "host": "localhost",
         "database": "test_profile",
-        "user": "hesha",
+        "user": "hesham",
         "password": "123123"
     }
   }

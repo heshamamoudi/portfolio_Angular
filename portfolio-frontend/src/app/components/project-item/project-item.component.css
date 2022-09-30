@@ -1,0 +1,8 @@
+.card{
+    width: 200px;
+    min-width: min-content;
+    margin: 10px;
+}
+.text{
+    color: black;
+}

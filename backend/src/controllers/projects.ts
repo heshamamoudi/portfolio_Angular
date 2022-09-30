@@ -11,7 +11,7 @@ const index = async (req: express.Request, res: express.Response) => {
     res.json(project_arr);
   } catch (error) {
     res.status(404);
-    res.json(`Page not Found ${error}`);
+    res.json(`Error: ${error}`);
   }
 };
 
@@ -19,9 +19,9 @@ const create = async (req: express.Request, res: express.Response) => {
   try {
     let imgData: string[] = [];
     const data: any = req.files;
-
+    if(data)
     data.forEach((f: { originalname: any; }) => {
-      imgData.push(`${process.env.URL}projects/${req.body.name}/${f.originalname}`);
+      imgData.push(`${process.env.URL}/projects/${req.body.name}/${f.originalname}`);
     });
     const projectOb: project={
        name:req.body.name,
@@ -32,7 +32,7 @@ const create = async (req: express.Request, res: express.Response) => {
     res.json(project_arr);
   } catch (error) {
     res.status(404);
-    res.json(`Page not Found ${error}`);
+    res.json(`Error: ${error}`);
   }
 };
 router.get('/projects', index);

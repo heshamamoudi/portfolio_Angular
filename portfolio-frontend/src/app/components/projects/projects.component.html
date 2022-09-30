@@ -1,0 +1,7 @@
+<div class="ctn-project" id="projects">
+  <app-project-item *ngFor="let project of projects" [Project]="project"  (addProject)="addProject($event)"></app-project-item>
+  <form #form="ngForm" (ngSubmit)="onSubmit()">
+    <input type="submit" value="add Project" class="cart-btn mt-2">    
+</form>
+  
+</div>
