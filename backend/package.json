@@ -5,7 +5,11 @@
   "main": "index.js",
   "scripts": {
     "start": "node ./www/server.js",
+<<<<<<< HEAD
     "dev": "tsc && nodemon ./www/server.js",
+=======
+    "dev": "nodemon ./www/server.js",
+>>>>>>> 9f16bc7cd591b4b765d9976cdbfff47af2ef82fc
     "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
