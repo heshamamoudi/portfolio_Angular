@@ -14,8 +14,11 @@
     </p>
   </div>
   <ng-image-slider
+  class="slide"
+  [slideImage]="1"
     [images]="imageObject"
-    imageSize="{width:250px,height:250px}"
+    [manageImageRatio]="true"
+    imageSize="{width:250px,min-height:300px}"
     #nav
   ></ng-image-slider>
 </div>

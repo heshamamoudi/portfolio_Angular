@@ -2,10 +2,26 @@
 }
 .card{
     width: 250px;
+    margin: auto;
+    min-height: 400px;
+    justify-content: space-between;
     /* min-width: min-content; */
-    gap: 10px;
+    max-height: 400px ;
+    /* gap: 10px; */
     padding: 20px;
 }
 .text{
     color: black;
 }
+.slide img{
+  /* text-align: end;
+  justify-self: end;
+  justify-content: end; */
+  /* align-self: center; */
+ height: unset;
+}
+.ng-image-slider .ng-image-slider-container .main .main-inner .img-div img {
+
+  height: unset !important;
+}
+

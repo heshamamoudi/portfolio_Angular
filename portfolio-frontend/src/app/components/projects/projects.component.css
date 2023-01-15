@@ -1,12 +1,19 @@
-.ctn-project{
+.ctn-projects{
+  min-height: fit-content!important;
+}
+
+.container{
     /* width: 100vw ; */
     text-align: center;
     /* padding: 100px; */
     margin: auto;
-    min-height: fit-content;
-    display: flexbox;
-    columns: 3;
-    row-gap: 40px;
+    /* min-height: fit-content; */
+    display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 10px;
+
+    row-gap: 30px;
+    /* row-gap: 40px; */
 
 }
 
