@@ -1,20 +1,22 @@
+<div class="container">
 <div class="card">
-    <div class="info">
-        <p class="text">
-            {{Project.id}}
-        </p>
-<p class="text">
-    Project Name: 
-    {{Project.name}}
-</p>
-<p class="text">
-    Description: 
-    {{Project.description}}
-</p>
-    </div>
-    <!-- <div *ngFor="let img of Project.images">
-        <img src={{img}}/>
-    </div> -->
-  
-    
+  <div class="info">
+    <p class="text">
+      {{ Project.id }}
+    </p>
+    <p class="text">
+      Project Name:
+      {{ Project.name }}
+    </p>
+    <p class="text">
+      Description:
+      {{ Project.description }}
+    </p>
+  </div>
+  <ng-image-slider
+    [images]="imageObject"
+    imageSize="{width:250px,height:250px}"
+    #nav
+  ></ng-image-slider>
+</div>
 </div>

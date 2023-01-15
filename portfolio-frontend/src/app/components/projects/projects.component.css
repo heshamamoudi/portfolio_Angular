@@ -1,8 +1,163 @@
 .ctn-project{
-    width: 100vw ;
+    /* width: 100vw ; */
     text-align: center;
-    padding: 100px;
+    /* padding: 100px; */
     margin: auto;
     min-height: fit-content;
-    display: flex;
+    display: flexbox;
+    columns: 3;
+    row-gap: 40px;
+
 }
+
+.form{
+  /* background: #1817175b; */
+  color: black;
+  width: min-content;
+  height: min-content;
+  margin: auto;
+}
+
+.group {
+  position: relative;
+ }
+
+ .input {
+  font-size: 16px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 200px;
+  border: none;
+  border-bottom: 1px solid #515151;
+  background: transparent;
+ }
+
+ .input:focus {
+  outline: none;
+ }
+
+ label {
+  color: #999;
+  font-size: 18px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 5px;
+  top: 10px;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+ }
+
+ .input:focus ~ label, .input:valid ~ label {
+  top: -20px;
+  font-size: 14px;
+  color: #5264AE;
+ }
+
+ .bar {
+  position: relative;
+  display: block;
+  width: 200px;
+ }
+
+ .bar:before, .bar:after {
+  content: '';
+  height: 2px;
+  width: 0;
+  bottom: 1px;
+  position: absolute;
+  background: #5264AE;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+ }
+
+ .bar:before {
+  left: 50%;
+ }
+
+ .bar:after {
+  right: 50%;
+ }
+
+ .input:focus ~ .bar:before, .input:focus ~ .bar:after {
+  width: 50%;
+ }
+
+ .highlight {
+  position: absolute;
+  height: 60%;
+  width: 100px;
+  top: 25%;
+  left: 0;
+  pointer-events: none;
+  opacity: 0.5;
+ }
+
+ .input:focus ~ .highlight {
+  animation: inputHighlighter 0.3s ease;
+ }
+
+ @keyframes inputHighlighter {
+  from {
+   background: #5264AE;
+  }
+
+  to {
+   width: 0;
+   background: transparent;
+  }
+ }
+.file-upload{
+  opacity: 0; position:absolute; left:0px; top:0px; width:100%; height:100%;
+}
+
+ .button {
+  --color: #560bad;
+  font-family: inherit;
+  display: inline-block;
+  width: 8em;
+  height: 2.6em;
+  line-height: 2.5em;
+  margin: 20px;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid var(--color);
+  transition: color .5s;
+  z-index: 1;
+  font-size: 17px;
+  border-radius: 6px;
+  font-weight: 500;
+  color: var(--color);
+ }
+
+ .button:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background: var(--color);
+  height: 150px;
+  width: 200px;
+  border-radius: 50%;
+ }
+
+ .button:hover {
+  color: #fff;
+ }
+
+ .button:before {
+  top: 100%;
+  left: 100%;
+  transition: all .7s;
+ }
+
+ .button:hover:before {
+  top: -30px;
+  left: -30px;
+ }
+
+ .button label:active:before {
+  background: #3a0ca3;
+  transition: background 0s;
+ }

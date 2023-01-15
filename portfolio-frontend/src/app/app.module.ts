@@ -8,13 +8,9 @@ import { HeroComponent } from './components/hero/hero.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ContactComponent } from './components/contact/contact.component';
-<<<<<<< HEAD
 import { ProjectsComponent } from './components/projects/projects.component';
 import { ProjectItemComponent } from './components/project-item/project-item.component';
-=======
-import { LoginComponent } from './components/login/login.component';
->>>>>>> 9f16bc7cd591b4b765d9976cdbfff47af2ef82fc
-
+import { NgImageSliderModule } from 'ng-image-slider';
 
 
 
@@ -25,12 +21,8 @@ import { LoginComponent } from './components/login/login.component';
     NavbarComponent,
     FooterComponent,
     ContactComponent,
-<<<<<<< HEAD
     ProjectsComponent,
     ProjectItemComponent,
-=======
-    LoginComponent,
->>>>>>> 9f16bc7cd591b4b765d9976cdbfff47af2ef82fc
 
 
   ],
@@ -39,6 +31,7 @@ import { LoginComponent } from './components/login/login.component';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
+    NgImageSliderModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

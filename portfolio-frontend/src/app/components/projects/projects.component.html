@@ -1,7 +1,35 @@
 <div class="ctn-project" id="projects">
-  <app-project-item *ngFor="let project of projects" [Project]="project"  (addProject)="addProject($event)"></app-project-item>
-  <form #form="ngForm" (ngSubmit)="onSubmit()">
-    <input type="submit" value="add Project" class="cart-btn mt-2">    
-</form>
-  
+  <app-project-item
+    *ngFor="let project of projects"
+    [Project]="project"
+    (addProject)="addProject($event)"
+  ></app-project-item>
+  <form #form="ngForm" class="form" (ngSubmit)="onSubmit()">
+    <div class="group">
+      <input class="input" name="name" [(ngModel)]="name" required="" />
+      <span class="highlight"></span>
+      <span class="bar"></span>
+      <label>Project Name</label>
+    </div>
+    <div class="group mt-5">
+      <input
+        class="input"
+        name="description"
+        [(ngModel)]="description"
+        required=""
+      />
+      <span class="highlight"></span>
+      <span class="bar"></span>
+      <label>Project Name</label>
+    </div>
+    <label for="images"></label>
+    <button class="button">
+      Choose File
+      <input   name="images" class="file-upload " type="file"  (change)="HandleFileInput($event)" accept="image/*" multiple/>
+    </button>
+    <button class="button">
+      Submit
+      <input  type="submit" value="add Project" class="file-upload">
+    </button>
+  </form>
 </div>

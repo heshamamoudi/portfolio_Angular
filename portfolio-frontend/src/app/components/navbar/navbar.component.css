@@ -1,9 +1,9 @@
 .navbar {
-  width: 100vw;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   /* background-color: ; */
-  padding: 40px;
+  padding: 20px;
   position:fixed ;
 }
 .nav {
@@ -20,7 +20,7 @@
   list-style: none;
   display: flex;
   align-items: center;
-  
+
 }
 .links-list li {
   margin: 0 0 0 10px;

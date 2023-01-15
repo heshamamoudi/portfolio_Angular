@@ -17,6 +17,7 @@ const index = async (req: express.Request, res: express.Response) => {
 
 const create = async (req: express.Request, res: express.Response) => {
   try {
+    console.log(req.files)
     let imgData: string[] = [];
     const data: any = req.files;
     if(data)

@@ -12,11 +12,12 @@ export class ProjectsService {
 {
 return this.http.get<[]>("http://localhost:8069/projects")
 }
-addProject():Observable<any>
+addProject(Project:any):Observable<any>
 {
- const project = {name:'hesham',description:"angular post",images:[]}
-  console.log('im in')
-return this.http.post<any>("http://localhost:8069/projects",project)
+return this.http.post<any>("http://localhost:8069/projects",Project, {
+  reportProgress: true,
+  responseType: 'json'
+})
 }
 
 }

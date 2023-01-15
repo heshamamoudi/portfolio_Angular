@@ -8,9 +8,26 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 export class ProjectItemComponent implements OnInit {
  @Input() Project:any;
  @Output() addProject:EventEmitter<any>=new EventEmitter;
-  constructor() { }
+ imageObject: Array<object> =[]
+
+  constructor() {
+
+  }
 
   ngOnInit(): void {
+    if(this.Project){
+      if(this.Project.images.length>0){
+        for(let img of this.Project.images){
+          this.imageObject.push({image:img,
+            thumbImage:img,
+            alt:this.Project.name,
+            title:this.Project.name,
+          },)
+        }
+
+      }
+    }
   }
+
 
 }

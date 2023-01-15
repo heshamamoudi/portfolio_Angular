@@ -6,9 +6,9 @@
     box-sizing: border-box !important;
 }
 body{
-    overflow: hidden;
+    /* overflow: hidden;
     padding: 0;
-    margin: 0;
-    
+    margin: 0; */
+
     background: #191a1ffe;
 }
